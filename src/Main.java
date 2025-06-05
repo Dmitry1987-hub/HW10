@@ -27,7 +27,7 @@ public class Main {
             System.out.println(i);
         }
         //задача 3
-        for (int i = 0; i < 17; i = i + 2) {
+        for (int i = 0; i <= 17; i = i + 2) {
             System.out.println(i);
         }
 
@@ -37,10 +37,13 @@ public class Main {
         }
 
         //задача 5
-        for (int i = 2096; i >= 1904; i = i - 4) {
+
+        for (int i = 1904; i <= 2096; i++){
+            if ((i % 4 == 0 && i % 100 != 0) || (i % 400 == 0))
             System.out.println("Високосный год " + i);
         }
         //задача 6
+
         for (int i = 7; i <= 98; i = i + 7) {
             System.out.println(i);
         }
@@ -53,18 +56,20 @@ public class Main {
         //задача 8
         int cent = 29000;
         int yar = 0;
-        for (int i = 0; i <= 7; i++) {
+        for (int i = 0; i <= 12; i++) {
             yar = yar + cent;
             System.out.println("за месяц " + i + " равна " + yar);
         }
 
         //задача 9
         int cent1 = 29000;
-        int yar1 = 0;
-        for (int i = 0; i <= 14; i++) {
-            yar1 = yar1 + cent / 100;
-            System.out.println("месяц " + i + " сумма накоплений ровна " + yar1);
+        int total1 = 0;
+        for (int i = 0; i <= 12; i++) {
+            total1 = total1 + total1 / 100;
+            total1 = total1 + cent1;
+            System.out.println("За месяц " + i + " сумма накоплений ровна " + total1);
         }
+        System.out.println("и того " + total1);
 
 
         //задача 10
